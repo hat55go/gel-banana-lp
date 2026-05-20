@@ -1039,6 +1039,24 @@
         note: "賃上げに前向きな小規模事業者で候補。商工会・商工会議所との確認が重要です。"
       },
       {
+        name: "福知山商工会議所 中小企業持続経営支援補助金（ステップアップ枠）",
+        rate: 2 / 3,
+        cap: 200000,
+        capLabel: "小規模 最大20万円",
+        url: "https://www.fukuchiyama.or.jp/",
+        expense: "対象経費: 経営改善・販路開拓・業務効率化・サイバーセキュリティ対策等",
+        note: "2026年6月1日〜7月3日の短期公募。10万〜30万円程度の小さな業務自動化と相性が良い制度です。"
+      },
+      {
+        name: "福知山市商工会 販路開拓支援事業助成金",
+        rate: 0.5,
+        cap: 50000,
+        capLabel: "最大5万円",
+        url: "https://fukuchiyama.kyoto-fsci.or.jp/",
+        expense: "対象経費: 展示会出展料・ブース装飾・チラシ・旅費・発送費等",
+        note: "イベント出展や販路開拓向け。SaaS開発本体より、展示会・商談会での露出費用に使う候補です。"
+      },
+      {
         name: "中小企業省力化投資補助金 一般型",
         rate: 0.5,
         cap: 100000000,
@@ -1180,6 +1198,7 @@
     function eligibleDevelopmentGrants(planKey, price, people) {
       const names = new Set(["IT導入補助金 通常枠", "京都府副業・兼業プロ人材補助金"]);
       if (price <= 500000 || state.scope === "prototype") names.add("小規模事業者持続化補助金");
+      if (price <= 300000 || state.scope === "prototype") names.add("福知山商工会議所 中小企業持続経営支援補助金（ステップアップ枠）");
       if (state.goal === "operations" || state.goal === "customer") names.add("IT導入補助金 インボイス枠");
       if (state.offline || planKey === "secure") names.add("IT導入補助金 セキュリティ枠");
       if (state.scope === "prototype" && price <= 1000000) names.add("小規模事業者持続化補助金 賃金引上枠");

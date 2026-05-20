@@ -1423,6 +1423,24 @@
         note: "福知山市内の小規模事業者向け候補。年度継続と公募状況は市へ確認します。",
         url: "https://www.city.fukuchiyama.lg.jp/soshiki/78/47617.html"
       },
+      fukuchiyamaStepup: {
+        name: "福知山商工会議所 中小企業持続経営支援補助金（ステップアップ枠）",
+        rate: 2 / 3,
+        cap: 200000,
+        capLabel: "小規模 最大20万円",
+        expense: "対象経費: 経営改善・販路開拓・業務効率化・サイバーセキュリティ対策等",
+        note: "2026年6月1日〜7月3日の短期公募。小規模企業は2/3・最大20万円、中小企業は1/2・最大30万円が目安です。",
+        url: "https://www.fukuchiyama.or.jp/"
+      },
+      fukuchiyamaHanro: {
+        name: "福知山市商工会 販路開拓支援事業助成金",
+        rate: 0.5,
+        cap: 50000,
+        capLabel: "最大5万円",
+        expense: "対象経費: 展示会出展料・ブース装飾・チラシ・旅費・発送費等",
+        note: "イベント出展や販路開拓向け。原則、開催7日前までに申請し、終了後2週間以内の報告が必要です。",
+        url: "https://fukuchiyama.kyoto-fsci.or.jp/"
+      },
       kyotoAdvanced: {
         name: "京都府 先端設備等導入補助金",
         rate: 0.5,
@@ -1559,6 +1577,12 @@
       }
       if (state.fukuchiyama && ecFriendly) {
         grants.push(grantDefs.fukuchiyamaEc);
+      }
+      if (state.fukuchiyama && (smallScope || advisoryLike || serviceKey === "seminar" || ecFriendly)) {
+        grants.push(grantDefs.fukuchiyamaStepup);
+      }
+      if (state.fukuchiyama && (serviceKey === "seminar" || ecFriendly)) {
+        grants.push(grantDefs.fukuchiyamaHanro);
       }
       if (state.kyoto && (serviceKey === "grantplan" || serviceKey === "advisor" || state.industry === "manufacturing")) {
         grants.push(grantDefs.kyotoAdvanced);
