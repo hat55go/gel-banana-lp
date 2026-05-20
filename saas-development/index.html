@@ -734,11 +734,19 @@
             </div>
             <div class="price-stack">
               <div class="price-hero">
-                <small>概算の初期開発費</small>
+                <small>概算の実質負担</small>
                 <strong id="initialPrice">--</strong>
               </div>
 
               <div class="breakdown">
+                <div class="breakdown-row">
+                  <span>初期開発費</span>
+                  <strong id="listPrice">--</strong>
+                </div>
+                <div class="breakdown-row">
+                  <span>想定助成額</span>
+                  <strong id="grantAmount">--</strong>
+                </div>
                 <div class="breakdown-row">
                   <span>月額保守・運用</span>
                   <strong id="monthlyPrice">--</strong>
@@ -746,10 +754,6 @@
                 <div class="breakdown-row">
                   <span>開発期間目安</span>
                   <strong id="timeline">--</strong>
-                </div>
-                <div class="breakdown-row">
-                  <span>想定助成額</span>
-                  <strong id="grantAmount">--</strong>
                 </div>
               </div>
 
@@ -1126,9 +1130,11 @@
         "【診断結果】",
         `提案プラン: ${estimate.plan.name}`,
         `初期開発費: ${yen(estimate.price)}〜`,
+        `想定助成額: 最大 ${yen(estimate.best.amount)}`,
+        `概算の実質負担: ${yen(estimate.best.net)}〜`,
         `月額保守・運用: ${yen(estimate.monthly)}〜`,
         `開発期間目安: ${estimate.months}`,
-        `想定助成額: 最大 ${yen(Math.max(...estimate.grants.map(g => g.amount)))}`,
+        `最上位の候補制度: ${estimate.best.name}`,
         "",
         "【補助金候補】",
         ...estimate.grants.slice(0, 5).map(g => `- ${g.name}: ${g.expense} / 補助額 ${yen(g.amount)} / 参考負担 ${yen(g.net)}〜`),
@@ -1234,6 +1240,7 @@
         months: scope.months,
         additions,
         grants: grantCandidates,
+        best: grantCandidates[0],
         goalExample: goals[state.goal].example
       };
     }
@@ -1266,6 +1273,7 @@
         document.getElementById("planName").textContent = "まだ試算していません";
         document.getElementById("planDesc").textContent = "条件を選んで「この内容で開発診断」を押すと、概算結果が表示されます。";
         document.getElementById("initialPrice").textContent = "--";
+        document.getElementById("listPrice").textContent = "--";
         document.getElementById("monthlyPrice").textContent = "--";
         document.getElementById("timeline").textContent = "--";
         document.getElementById("grantAmount").textContent = "--";
@@ -1285,6 +1293,7 @@
         document.getElementById("planName").textContent = "伴走型支援が合いそうです";
         document.getElementById("planDesc").textContent = "まだシステムを作るより、研修・顧問・補助金整理から始める方が投資対効果を出しやすい段階です。";
         document.getElementById("initialPrice").textContent = "伴走診断へ";
+        document.getElementById("listPrice").textContent = "要確認";
         document.getElementById("monthlyPrice").textContent = "要確認";
         document.getElementById("timeline").textContent = "1ヶ月〜";
         document.getElementById("grantAmount").textContent = "制度確認";
@@ -1306,10 +1315,11 @@
 
       document.getElementById("planName").textContent = estimate.plan.name;
       document.getElementById("planDesc").textContent = `${estimate.plan.desc} ${estimate.goalExample}`;
-      document.getElementById("initialPrice").textContent = `${yen(estimate.price)}〜`;
+      document.getElementById("initialPrice").textContent = `${yen(estimate.best.net)}〜`;
+      document.getElementById("listPrice").textContent = `${yen(estimate.price)}〜`;
       document.getElementById("monthlyPrice").textContent = `${yen(estimate.monthly)}〜`;
       document.getElementById("timeline").textContent = estimate.months;
-      document.getElementById("grantAmount").textContent = `最大 ${yen(Math.max(...estimate.grants.map(g => g.amount)))}`;
+      document.getElementById("grantAmount").textContent = estimate.best.amount > 0 ? `-${yen(estimate.best.amount)}` : "要確認";
       const basis = estimate.additions.length ? `
         <div class="grant">
           <div class="grant-head">
