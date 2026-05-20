@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Gel-banana 独自SaaS・受託開発シミュレーター</title>
-  <meta name="description" content="ヒアリングから業務課題を整理し、会社専用のSaaS・業務システムを開発する受託開発向けの概算診断LPです。">
+  <title>Gel-banana 業務自動化・BPaaS化支援シミュレーター</title>
+  <meta name="description" content="10万円程度の小さな業務自動化から始め、月額保守と改善を通じて将来的なBPaaS化まで見据える概算診断LPです。">
   <style>
     :root {
       --ink: #161616;
@@ -629,8 +629,8 @@
         <div>合同会社 Gel-banana</div>
       </div>
       <nav class="nav-links" aria-label="ページ内ナビゲーション">
-        <a href="#estimate">開発診断</a>
-        <a href="#cases">開発例</a>
+        <a href="#estimate">自動化診断</a>
+        <a href="#cases">自動化例</a>
         <a href="#flow">進め方</a>
         <a href="../subsidy-simulator/index.html">伴走支援</a>
         <a class="nav-cta" href="#contact">相談する</a>
@@ -642,25 +642,25 @@
     <section class="hero">
       <div class="wrap hero-grid">
         <div>
-          <div class="eyebrow">福知山発 / 独自SaaS・業務システム受託開発</div>
+          <div class="eyebrow">福知山発 / 業務自動化・BPaaS化支援</div>
           <h1>
-            <span class="title-line">御社専用の<span class="highlight keep">SaaSを</span></span>
-            <span class="title-line">開発いたします。</span>
+            <span class="title-line">小さな<span class="highlight keep">業務自動化を</span></span>
+            <span class="title-line">10万円から。</span>
           </h1>
           <p class="lead">
-            現状の課題やご要望を丁寧にヒアリングさせていただき、課題整理から設計・開発・運用まで丸ごとサポートします。
-            伴走支援より更に本格的な業務改善を行いたい事業者様向けのサービスです。
+            現状の課題やご要望を丁寧にヒアリングし、まずは1業務だけを小さく自動化します。
+            月額1〜2万円程度の保守・改善を続けながら、将来的には業界特化のBPaaS化まで見据えて育てます。
           </p>
           <div class="hero-actions">
-            <a class="button" href="#estimate">開発診断をはじめる</a>
-            <a class="button secondary" href="#cases">開発例を見る</a>
+            <a class="button" href="#estimate">自動化診断をはじめる</a>
+            <a class="button secondary" href="#cases">事例を見る</a>
           </div>
         </div>
-        <aside class="system-card" aria-label="システム開発の打ち合わせイメージ">
-          <img src="dev-hero-photo.png" alt="ノートPCと業務フロー資料を見ながらシステム開発の要件整理をするチーム">
+        <aside class="system-card" aria-label="業務自動化の打ち合わせイメージ">
+          <img src="dev-hero-photo.png" alt="ノートPCと業務フロー資料を見ながら業務自動化の要件整理をするチーム">
           <div class="photo-caption">
-            <b>現場の課題を聞き、使える形まで設計</b>
-            <span>ヒアリング / 要件整理 / 開発 / 導入支援</span>
+            <b>現場の作業を聞き、小さく自動化</b>
+            <span>ヒアリング / BPA / 保守改善 / BPaaS化</span>
           </div>
         </aside>
       </div>
@@ -669,8 +669,8 @@
     <section id="estimate">
       <div class="wrap">
         <div class="section-head">
-          <h2><span class="keep">独自システム開発の</span> <span class="keep">概算診断</span></h2>
-          <p>業務の重さ、利用人数、必要な連携を選ぶと、開発規模・月額保守・補助金候補を概算します。</p>
+          <h2><span class="keep">業務自動化の</span> <span class="keep">概算診断</span></h2>
+          <p>まず自動化したい業務、利用人数、必要な連携を選ぶと、初期費用・月額保守・補助金候補を概算します。</p>
         </div>
 
         <div class="estimator">
@@ -691,7 +691,7 @@
               </div>
               <div class="field-row">
                 <label class="field">
-                  <span>開発規模</span>
+                  <span>導入ステージ</span>
                   <select id="scope"></select>
                 </label>
                 <label class="field">
@@ -718,19 +718,19 @@
 
             <div class="simulate-bar">
               <div>
-                <strong>条件を選び終えたら、開発規模を試算します。</strong>
-                <p>初回商談では、この金額を起点に「作るべき範囲」と「後回しにする機能」を整理します。</p>
-                <div class="dirty-note" id="dirtyNote">条件を選んで「この内容で開発診断」を押してください。</div>
+                <strong>条件を選び終えたら、業務自動化の概算を出します。</strong>
+                <p>初回商談では、この金額を起点に「まず置き換える作業」と「後回しにする作業」を整理します。</p>
+                <div class="dirty-note" id="dirtyNote">条件を選んで「この内容で自動化診断」を押してください。</div>
               </div>
-              <button class="simulate-button" id="simulateButton" type="button">この内容で開発診断</button>
+              <button class="simulate-button" id="simulateButton" type="button">この内容で自動化診断</button>
             </div>
           </div>
 
           <aside class="panel result" id="estimateResult" aria-live="polite">
             <div class="result-top">
-              <div class="label">Development Estimate</div>
+              <div class="label">Automation Estimate</div>
               <h3 id="planName">まだ試算していません</h3>
-              <p class="desc" id="planDesc">条件を選んで「この内容で開発診断」を押すと、概算結果が表示されます。</p>
+              <p class="desc" id="planDesc">条件を選んで「この内容で自動化診断」を押すと、概算結果が表示されます。</p>
             </div>
             <div class="price-stack">
               <div class="price-hero">
@@ -740,7 +740,7 @@
 
               <div class="breakdown">
                 <div class="breakdown-row">
-                  <span>初期開発費</span>
+                  <span>初期導入費</span>
                   <strong id="listPrice">--</strong>
                 </div>
                 <div class="breakdown-row">
@@ -748,11 +748,11 @@
                   <strong id="grantAmount">--</strong>
                 </div>
                 <div class="breakdown-row">
-                  <span>月額保守・運用</span>
+                  <span>月額保守・改善</span>
                   <strong id="monthlyPrice">--</strong>
                 </div>
                 <div class="breakdown-row">
-                  <span>開発期間目安</span>
+                  <span>導入期間目安</span>
                   <strong id="timeline">--</strong>
                 </div>
               </div>
@@ -760,13 +760,13 @@
               <div class="grant-list" id="grantList"></div>
 
               <div class="result-actions">
-                <a class="primary-link" id="consultMail" href="mailto:info@gel-banana.jp?subject=独自SaaS開発の相談">この内容で相談する</a>
+                <a class="primary-link" id="consultMail" href="mailto:info@gel-banana.jp?subject=業務自動化の相談">この内容で相談する</a>
                 <a class="line-link" href="https://lin.ee/xHy6wmt">LINEで相談する</a>
                 <div class="copy-note" id="copyNote">診断内容をコピーしました。メールやLINEに貼り付けできます。</div>
               </div>
 
               <div class="notice">
-                表示金額は税別の下限目安です。受託開発は業務範囲・権限設計・データ移行・保守要件で変動し、大型案件は個別見積となります。
+                表示金額は税別の下限目安です。初期費用を抑えるため、まずは1業務だけを小さく自動化します。業務範囲・連携数・セキュリティ要件で変動し、大型案件は個別見積となります。
               </div>
             </div>
           </aside>
@@ -777,7 +777,7 @@
     <section id="cases">
       <div class="wrap">
         <div class="section-head">
-          <h2><span class="keep">開発例</span></h2>
+          <h2><span class="keep">自動化例</span></h2>
           <p>これまでに開発・導入をさせていただいた事例を一部紹介させていただいております。</p>
         </div>
         <div class="cards">
@@ -811,7 +811,7 @@
       <div class="wrap">
         <div class="section-head">
           <h2><span class="keep">サービス全体の</span> <span class="keep">流れ</span></h2>
-          <p>対面ヒアリングから課題整理、デモ作成、フィードバック、本開発、導入支援まで一貫してサポートします。</p>
+          <p>対面ヒアリングから課題整理、小さな自動化、フィードバック、保守改善、将来のBPaaS化まで一貫してサポートします。</p>
         </div>
         <div class="flow">
           <article class="flow-step">
@@ -825,28 +825,28 @@
             <div class="flow-num">02</div>
             <div>
               <h3><span class="keep">課題整理・</span> <span class="keep">ご提案</span></h3>
-              <p><strong>システム化すると楽になる箇所</strong>と、今は作らなくてよい箇所を整理し、開発範囲と概算費用をご提案します。</p>
+              <p><strong>自動化すると楽になる箇所</strong>と、今は人が対応した方がよい箇所を整理し、初期導入範囲と概算費用をご提案します。</p>
             </div>
           </article>
           <article class="flow-step">
             <div class="flow-num">03</div>
             <div>
               <h3><span class="keep">デモ作成・</span> <span class="keep">確認ミーティング</span></h3>
-              <p>いきなり本開発に入らず、まずは画面や処理のデモを作成します。実際の業務に合うか確認しながら調整します。</p>
+              <p>いきなり大きく作らず、まずは画面や処理のデモを作成します。実際の業務に合うか確認しながら調整します。</p>
             </div>
           </article>
           <article class="flow-step">
             <div class="flow-num">04</div>
             <div>
-              <h3><span class="keep">フィードバック・</span> <span class="keep">本開発</span></h3>
-              <p>デモへのフィードバックを反映したうえで、画面、データベース、AI処理、権限、外部連携などを本開発します。</p>
+              <h3><span class="keep">フィードバック・</span> <span class="keep">小さな自動化</span></h3>
+              <p>デモへのフィードバックを反映したうえで、画面、データベース、AI処理、権限、外部連携などを必要最小限で実装します。</p>
             </div>
           </article>
           <article class="flow-step">
             <div class="flow-num">05</div>
             <div>
               <h3><span class="keep">導入支援・</span> <span class="keep">運用サポート</span></h3>
-              <p>開発して終わりではなく、使い始めの説明、操作定着、改善相談まで支援します。必要に応じて安心サポートやチャットサポートも追加できます。</p>
+              <p>作って終わりではなく、使い始めの説明、操作定着、月額保守、改善相談まで支援します。似た業務の知見を蓄積し、将来的なBPaaS化につなげます。</p>
             </div>
           </article>
         </div>
@@ -897,8 +897,8 @@
   <script>
     const state = {
       goal: "hearing",
-      scope: "standard",
-      people: 15,
+      scope: "prototype",
+      people: 5,
       ai: true,
       db: true,
       integration: false,
@@ -908,7 +908,7 @@
     };
     let simulatedEstimate = null;
     let hasSimulated = false;
-    let consultSubject = "独自SaaS開発の相談";
+    let consultSubject = "業務自動化の相談";
     let consultBody = "";
     const storageKey = "gelBananaSaasDevelopmentState";
 
@@ -916,20 +916,20 @@
       hearing: {
         label: "議事録・カルテを自動化したい",
         hint: "録音、文字起こし、要約、指定フォーマット入力",
-        plan: "vertical",
-        example: "録音から相談記録を自動整理する専用SaaS"
+        plan: "automation",
+        example: "録音から相談記録を自動整理する小さな業務アプリ"
       },
       operations: {
         label: "受注・在庫・帳票を整理したい",
         hint: "紙、FAX、LINE、Excelを一元管理",
-        plan: "workflow",
-        example: "現場の入力画面と管理画面を作る業務システム"
+        plan: "automation",
+        example: "現場の入力画面と管理画面を小さく作る業務自動化"
       },
       customer: {
         label: "顧客・案件管理を作りたい",
         hint: "問い合わせ、商談、対応履歴、検索",
-        plan: "crm",
-        example: "自社の営業フローに合わせた顧客管理SaaS"
+        plan: "automation",
+        example: "自社の営業フローに合わせた案件管理アプリ"
       },
       secure: {
         label: "オフラインAIを使いたい",
@@ -952,18 +952,16 @@
     };
 
     const scopes = {
-      prototype: { label: "試作・1業務だけ", add: 0, monthly: 10000, months: "2〜4週間" },
-      standard: { label: "標準・1部署で運用", add: 200000, monthly: 25000, months: "1〜3ヶ月" },
-      growth: { label: "複数部署・連携あり", add: 700000, monthly: 60000, months: "3〜6ヶ月" },
-      enterprise: { label: "高セキュリティ・専用基盤", add: 2000000, monthly: 120000, months: "6ヶ月〜" }
+      prototype: { label: "まず1業務だけ自動化", add: 0, monthly: 10000, months: "1〜3週間" },
+      standard: { label: "1部署で小さく運用", add: 100000, monthly: 20000, months: "2〜6週間" },
+      growth: { label: "複数業務・連携あり", add: 300000, monthly: 40000, months: "1〜3ヶ月" },
+      enterprise: { label: "高セキュリティ・本格運用", add: 1000000, monthly: 100000, months: "3ヶ月〜" }
     };
 
     const plans = {
-      vertical: { name: "1業務SaaS化", base: 800000, desc: "特定業務に深く合わせ、入力・AI整理・検索・共有まで作ります。" },
-      workflow: { name: "業務フロー管理システム", base: 1500000, desc: "受注、在庫、帳票、進捗など、現場の流れを一画面に集約します。" },
-      crm: { name: "顧客・案件管理SaaS", base: 1500000, desc: "自社の営業・対応履歴に合わせた顧客管理画面を作ります。" },
-      secure: { name: "オフライン/高セキュリティAI基盤", base: 2500000, desc: "外部送信を前提にしないローカルAI環境を設計します。" },
-      discovery: { name: "業務整理・開発診断", base: 100000, desc: "作るべき範囲を整理し、まず小さな試作で効果を検証します。" },
+      automation: { name: "小さな業務自動化", base: 100000, desc: "1業務に絞り、入力・整理・検索・共有の手間を小さなアプリで置き換えます。" },
+      secure: { name: "オフライン/高セキュリティAI基盤", base: 500000, desc: "外部送信を前提にしないローカルAI環境を小さく検証します。" },
+      discovery: { name: "業務整理・自動化診断", base: 50000, desc: "作るべき範囲を整理し、まず置き換えやすい業務を特定します。" },
       support: { name: "伴走支援から開始", base: 0, desc: "研修・顧問・補助金整理から始める段階です。" }
     };
 
@@ -1093,22 +1091,22 @@
       ].filter(Boolean);
 
       const selected = [
-        "独自SaaS開発診断からの相談です。",
+        "業務自動化・BPaaS化支援の診断からの相談です。",
         "",
         "【選択内容】",
         `作りたいもの: ${goals[state.goal].label}`,
         `補足: ${goals[state.goal].hint}`,
-        `開発規模: ${scopes[state.scope].label}`,
+        `導入ステージ: ${scopes[state.scope].label}`,
         `利用予定人数: ${state.people}名`,
         `必要要件: ${requirements.length ? requirements.join(" / ") : "未選択"}`
       ];
 
       if (!estimate) {
-        setConsultMail("独自SaaS開発の相談", [
+        setConsultMail("業務自動化の相談", [
           ...selected,
           "",
           "【診断結果】",
-          "まだ開発診断前です。"
+          "まだ自動化診断前です。"
         ]);
         return;
       }
@@ -1124,16 +1122,16 @@
         return;
       }
 
-      setConsultMail("独自SaaS開発の相談", [
+      setConsultMail("業務自動化の相談", [
         ...selected,
         "",
         "【診断結果】",
         `提案プラン: ${estimate.plan.name}`,
-        `初期開発費: ${yen(estimate.price)}〜`,
+        `初期導入費: ${yen(estimate.price)}〜`,
         `想定助成額: 最大 ${yen(estimate.best.amount)}`,
         `概算の実質負担: ${yen(estimate.best.net)}〜`,
-        `月額保守・運用: ${yen(estimate.monthly)}〜`,
-        `開発期間目安: ${estimate.months}`,
+        `月額保守・改善: ${yen(estimate.monthly)}〜`,
+        `導入期間目安: ${estimate.months}`,
         `最上位の候補制度: ${estimate.best.name}`,
         "",
         "【補助金候補】",
@@ -1175,24 +1173,27 @@
       saveState();
       const note = document.getElementById("dirtyNote");
       note.textContent = hasSimulated
-        ? "条件が変更されています。もう一度開発診断すると、金額を更新できます。"
-        : "条件を選んで「この内容で開発診断」を押してください。";
+        ? "条件が変更されています。もう一度自動化診断すると、金額を更新できます。"
+        : "条件を選んで「この内容で自動化診断」を押してください。";
     }
 
     function eligibleDevelopmentGrants(planKey, price, people) {
-      const names = new Set(["ものづくり補助金", "IT導入補助金 通常枠", "京都府副業・兼業プロ人材補助金"]);
-      if (planKey === "workflow" || planKey === "crm") names.add("IT導入補助金 インボイス枠");
+      const names = new Set(["IT導入補助金 通常枠", "京都府副業・兼業プロ人材補助金"]);
+      if (price <= 500000 || state.scope === "prototype") names.add("小規模事業者持続化補助金");
+      if (state.goal === "operations" || state.goal === "customer") names.add("IT導入補助金 インボイス枠");
       if (state.offline || planKey === "secure") names.add("IT導入補助金 セキュリティ枠");
-      if (state.scope === "prototype" && price <= 1500000) names.add("小規模事業者持続化補助金");
-      if (state.scope === "prototype" && price <= 3000000) names.add("小規模事業者持続化補助金 賃金引上枠");
+      if (state.scope === "prototype" && price <= 1000000) names.add("小規模事業者持続化補助金 賃金引上枠");
+      if (price >= 500000 || state.scope === "growth" || state.scope === "enterprise" || planKey === "secure") {
+        names.add("ものづくり補助金");
+      }
       if (state.multiOffice || people > 30 || state.scope === "growth" || state.scope === "enterprise") {
         names.add("中小企業省力化投資補助金 一般型");
       }
-      if (price >= 3000000 || state.scope === "growth" || state.scope === "enterprise") {
+      if (price >= 1000000 || state.scope === "growth" || state.scope === "enterprise") {
         names.add("中小企業新事業進出補助金");
         names.add("京都エコノミック・ガーデニング支援強化補助金");
       }
-      if (planKey === "workflow" || state.integration || state.multiOffice || people > 30) {
+      if (state.integration || state.multiOffice || people > 30 || state.goal === "operations") {
         names.add("京都府 先端設備等導入補助金");
       }
 
@@ -1215,7 +1216,7 @@
       const scope = scopes[state.scope];
       const lightStage = planKey === "discovery" || state.scope === "prototype";
       const additions = [
-        { label: "開発規模加算", active: true, amount: scope.add },
+        { label: "導入ステージ加算", active: true, amount: scope.add },
         { label: "AI要約・分類", active: state.ai && !lightStage, amount: 100000 },
         { label: "検索DB設計", active: state.db && !lightStage, amount: 100000 },
         { label: "既存ツール連携", active: state.integration, amount: lightStage ? 100000 : 200000 },
@@ -1249,7 +1250,7 @@
     function simulate() {
       simulatedEstimate = currentEstimate();
       hasSimulated = true;
-      document.getElementById("dirtyNote").textContent = "この条件で開発規模を試算しました。条件を変えた場合は、もう一度ボタンを押してください。";
+      document.getElementById("dirtyNote").textContent = "この条件で業務自動化の概算を試算しました。条件を変えた場合は、もう一度ボタンを押してください。";
       renderResult();
       saveState();
       moveToResult();
@@ -1272,7 +1273,7 @@
       updateConsultMail(estimate);
       if (!estimate) {
         document.getElementById("planName").textContent = "まだ試算していません";
-        document.getElementById("planDesc").textContent = "条件を選んで「この内容で開発診断」を押すと、概算結果が表示されます。";
+        document.getElementById("planDesc").textContent = "条件を選んで「この内容で自動化診断」を押すと、概算結果が表示されます。";
         document.getElementById("initialPrice").textContent = "--";
         document.getElementById("listPrice").textContent = "--";
         document.getElementById("monthlyPrice").textContent = "--";
@@ -1284,7 +1285,7 @@
               <b>試算待ち</b>
               <span class="pill">未計算</span>
             </div>
-            <p>左側で条件を選び、「この内容で開発診断」を押してください。</p>
+            <p>左側で条件を選び、「この内容で自動化診断」を押してください。</p>
           </div>
         `;
         return;
@@ -1292,7 +1293,7 @@
 
       if (estimate.support) {
         document.getElementById("planName").textContent = "伴走型支援が合いそうです";
-        document.getElementById("planDesc").textContent = "まだシステムを作るより、研修・顧問・補助金整理から始める方が投資対効果を出しやすい段階です。";
+        document.getElementById("planDesc").textContent = "まだ自動化を作るより、研修・顧問・補助金整理から始める方が投資対効果を出しやすい段階です。";
         document.getElementById("initialPrice").textContent = "伴走診断へ";
         document.getElementById("listPrice").textContent = "要確認";
         document.getElementById("monthlyPrice").textContent = "要確認";
@@ -1326,7 +1327,7 @@
           <div class="grant-head">
             <div>
               <span class="grant-label">価格の考え方</span>
-              <b>下限価格に、必要な機能だけを加算</b>
+              <b>10万円程度の小さな導入費に、必要な機能だけを加算</b>
             </div>
             <span class="pill">個別見積</span>
           </div>
