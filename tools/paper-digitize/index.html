@@ -71,8 +71,8 @@
   <header class="sticky top-0 z-50 border-b border-black/10 bg-cream/85 backdrop-blur-xl">
     <div class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
       <a href="#" class="flex items-center gap-3" aria-label="Gel-banana トップへ">
-        <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-banana shadow-card" aria-hidden="true">
-          <div class="logo-mouth"></div>
+        <div class="flex h-12 w-12 items-center justify-center overflow-hidden rounded-2xl bg-white shadow-card" aria-hidden="true">
+          <img src="assets/gb-logo.png" alt="Gel-banana" class="h-10 w-10 object-contain">
         </div>
         <div>
           <p class="text-xs font-bold tracking-[.18em] text-muted">合同会社</p>
@@ -119,45 +119,49 @@
               料金を見る
             </a>
           </div>
-          <div class="mt-10 grid max-w-2xl grid-cols-3 gap-3">
-            <div class="rounded-3xl bg-white/75 p-4 shadow-card">
-              <p class="text-2xl font-black">1枚〜</p>
-              <p class="mt-1 text-xs font-bold text-muted">ペラ1枚でもOK</p>
-            </div>
-            <div class="rounded-3xl bg-white/75 p-4 shadow-card">
-              <p class="text-2xl font-black">製本も</p>
-              <p class="mt-1 text-xs font-bold text-muted">バラさず対応</p>
-            </div>
-            <div class="rounded-3xl bg-white/75 p-4 shadow-card">
-              <p class="text-2xl font-black">補助金</p>
-              <p class="mt-1 text-xs font-bold text-muted">DX補助金に対応</p>
-            </div>
-          </div>
         </div>
 
-        <!-- ビジュアル：紙→デジタル -->
+        <!-- ビジュアル：検索できるデジタルデータ -->
         <div class="relative">
-          <div class="rounded-[2.5rem] bg-white/80 p-8 shadow-soft">
-            <div class="flex items-center justify-between gap-4">
-              <div class="flex-1 text-center">
-                <div class="mx-auto flex h-24 w-20 flex-col justify-center gap-1.5 rounded-lg border-2 border-ink/20 bg-cream p-2 shadow-inner">
-                  <span class="block h-1.5 rounded bg-ink/15"></span>
-                  <span class="block h-1.5 rounded bg-ink/15"></span>
-                  <span class="block h-1.5 w-2/3 rounded bg-ink/15"></span>
+          <div class="rounded-[2rem] bg-ink p-5 shadow-soft">
+            <div class="mb-4 flex items-center gap-1.5">
+              <span class="h-3 w-3 rounded-full bg-white/25"></span>
+              <span class="h-3 w-3 rounded-full bg-white/25"></span>
+              <span class="h-3 w-3 rounded-full bg-white/25"></span>
+              <span class="ml-3 text-xs font-bold text-white/40">書類データベース</span>
+            </div>
+            <div class="flex items-center gap-2 rounded-xl bg-white px-4 py-3">
+              <span class="text-ink/40">🔍</span>
+              <span class="text-sm font-bold text-ink">契約書 ◯◯社</span>
+              <span class="ml-auto rounded-full bg-bananaLight px-2 py-0.5 text-xs font-black text-ink">3件</span>
+            </div>
+            <div class="mt-3 space-y-2">
+              <div class="flex items-center gap-3 rounded-xl bg-banana px-3 py-3">
+                <span class="text-lg">📄</span>
+                <div class="min-w-0 flex-1">
+                  <p class="truncate text-sm font-black text-ink">◯◯社_業務委託契約書.pdf</p>
+                  <p class="text-xs font-bold text-ink/60">2021/04 ・ 契約 ・ 全文検索OK</p>
                 </div>
-                <p class="mt-3 text-sm font-bold text-muted">紙の書類</p>
+                <span class="font-black text-ink">✓</span>
               </div>
-              <div class="text-3xl font-black text-banana">→</div>
-              <div class="flex-1 text-center">
-                <div class="mx-auto flex h-24 w-20 items-center justify-center rounded-2xl bg-ink shadow-card">
-                  <span class="text-3xl">🔍</span>
+              <div class="flex items-center gap-3 rounded-xl bg-white/10 px-3 py-3">
+                <span class="text-lg">📄</span>
+                <div class="min-w-0 flex-1">
+                  <p class="truncate text-sm font-bold text-white">◯◯社_覚書_2022.pdf</p>
+                  <p class="text-xs text-white/45">2022/09 ・ 契約</p>
                 </div>
-                <p class="mt-3 text-sm font-bold text-muted">検索できる<br>デジタルデータ</p>
+              </div>
+              <div class="flex items-center gap-3 rounded-xl bg-white/10 px-3 py-3">
+                <span class="text-lg">📄</span>
+                <div class="min-w-0 flex-1">
+                  <p class="truncate text-sm font-bold text-white">◯◯社_見積書綴り.pdf</p>
+                  <p class="text-xs text-white/45">2020/11 ・ 見積</p>
+                </div>
               </div>
             </div>
-            <div class="mt-6 rounded-2xl bg-bananaLight/60 p-4 text-center text-sm font-bold text-ink">
-              「契約書、◯◯社のやつ出して」<br>と聞くだけで出てくる状態へ。
-            </div>
+          </div>
+          <div class="absolute -bottom-4 -left-3 rounded-2xl bg-white px-4 py-3 text-sm font-black text-ink shadow-card">
+            紙の山 → 一瞬で発見 🔎
           </div>
         </div>
       </div>
@@ -278,14 +282,14 @@
               <h3 class="text-xl font-black">活用プラン（データ → 使えるシステム）</h3>
             </div>
             <p class="mt-4 text-sm leading-7 text-ink/70">
-              データにしただけでは、また散らかります。「どう管理するか」までセットで。<strong class="font-bold text-ink">多くはおよそ10万円前後、補助金活用で実質10万円以下</strong>を目安にしています。
+              データにしただけでは、また散らかります。「どう管理するか」までセットで。<strong class="font-bold text-ink">多くは5〜18万円前後、補助金活用で実質さらに軽く</strong>。
             </p>
             <div class="mt-5 grid gap-3 sm:grid-cols-3">
               <div class="rounded-2xl border border-black/10 bg-cream p-5">
                 <p class="text-xs font-black tracking-wide text-banana">LIGHT</p>
                 <p class="mt-1 font-black">Google Workspaceで整理</p>
                 <p class="mt-2 text-sm leading-6 text-ink/70">社員全員がスマホからでも検索・共有。まず手軽に。</p>
-                <p class="mt-3 text-lg font-black">約10万円〜</p>
+                <p class="mt-3 text-lg font-black">約5万円〜</p>
               </div>
               <div class="rounded-2xl border-2 border-banana bg-white p-5">
                 <p class="text-xs font-black tracking-wide text-banana">STANDARD</p>
@@ -329,7 +333,7 @@
             <div class="mt-5 grid gap-3">
               <label class="choice cursor-pointer">
                 <input class="sr-only" type="radio" name="plan" value="light" checked>
-                <span class="block rounded-2xl border border-black/10 bg-cream px-5 py-4 transition"><strong class="block text-base">LIGHT｜Google Workspaceで整理</strong><small class="mt-1 block text-sm font-bold opacity-70">約10万円〜</small></span>
+                <span class="block rounded-2xl border border-black/10 bg-cream px-5 py-4 transition"><strong class="block text-base">LIGHT｜Google Workspaceで整理</strong><small class="mt-1 block text-sm font-bold opacity-70">約5万円〜</small></span>
               </label>
               <label class="choice cursor-pointer">
                 <input class="sr-only" type="radio" name="plan" value="standard">
@@ -439,8 +443,8 @@
   <footer class="border-t border-black/10 bg-cream/80">
     <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-5 py-8 text-sm text-muted lg:flex-row lg:px-8">
       <div class="flex items-center gap-3">
-        <div class="flex h-9 w-9 items-center justify-center rounded-xl bg-banana" aria-hidden="true">
-          <div class="logo-mouth" style="width:22px;height:14px;border-width:4px;"></div>
+        <div class="flex h-9 w-9 items-center justify-center overflow-hidden rounded-xl bg-white shadow-card" aria-hidden="true">
+          <img src="assets/gb-logo.png" alt="Gel-banana" class="h-8 w-8 object-contain">
         </div>
         <span class="font-black text-ink">合同会社 Gel-banana</span>
       </div>
@@ -450,7 +454,7 @@
 
   <script>
     const plans = {
-      light:    { label: 'LIGHT（Google Workspaceで整理）', price: 100000 },
+      light:    { label: 'LIGHT（Google Workspaceで整理）', price: 50000 },
       standard: { label: 'STANDARD（自動化フロー構築）',     price: 180000 },
       original: { label: 'ORIGINAL（専用システム開発）',     price: null }
     };
@@ -467,7 +471,9 @@
       const conditions = selectedConditions();
 
       const eligible = (org === 'sme' || org === 'small') && plan.price !== null;
-      const rate = conditions.includes('wage') ? 0.667 : 0.5;
+      const wage = conditions.includes('wage');
+      const rate = wage ? 2/3 : 1/2;
+      const rateLabel = wage ? '2/3' : '1/2';
 
       // 結果表示
       $('listPrice').textContent = plan.price !== null ? yen.format(plan.price) : '要相談';
@@ -482,7 +488,7 @@
         $('savingText').textContent = '団体・自治体は制度設計により個別判断となります。';
       } else {
         const cost = Math.round(plan.price * (1 - rate));
-        $('subsidyRate').textContent = Math.round(rate * 100) + '%';
+        $('subsidyRate').textContent = rateLabel;
         $('actualCost').textContent = yen.format(cost);
         $('savingText').textContent = `${yen.format(plan.price - cost)} の負担軽減見込み`;
       }
@@ -492,9 +498,9 @@
       if (eligible) {
         grants.push({
           name: 'デジタル化・AI導入補助金',
-          rate: Math.round(rate * 100) + '%',
+          rate: rateLabel,
           source: '経済産業省',
-          desc: '紙のデジタル化に伴うデータ移行・SaaS設定・自動化開発が対象候補。' + (conditions.includes('wage') ? '賃上げ計画で補助率の上振れ候補。' : '')
+          desc: '紙のデジタル化に伴うデータ移行・SaaS設定・自動化開発が対象候補。' + (wage ? '賃上げ計画で補助率の上振れ候補。' : '')
         });
       }
       if (conditions.includes('fukuchiyama') || conditions.includes('kyoto')) {
